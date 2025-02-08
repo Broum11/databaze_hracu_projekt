@@ -1,0 +1,27 @@
+{% extends 'hlavni.html' %}
+
+{% block title %}Tabulka- Chance Liga{% endblock %}
+
+{% block content %}
+<h1>Chance Liga: tabulka 2023/2024</h1>
+<table>
+    <thead>  <!-- hlavička tabulky -->
+        <tr>
+            <th>Pořadí</th>
+            <th>Tým</th>
+            <th>Zápasy</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for team in teams %}
+        <tr>
+            <td>{{ team.position }}.</td>
+            <td>{{ team.team.name }}</td>
+            <td>{{ team.matches_played }}</td>
+            <td>{{ team.points }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'hlavni.html' %}
+
+{% block title %}{{ team.name }}{% endblock %}
+
+{% block content %}
+<h1>{{ team.name }}</h1>
+<p>Město: {{ team.city }}</p>
+<p>Stadion: {{ team.stadium }}</p>
+
+<h2>Soupiska hráčů</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Číslo dresu</th>
+            <th>Pozice</th>
+            <th>Jméno hráče</th>
+            <th>Národnost</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for player in team.players.all %} 
+        <tr>
+            <td>{{ player.number }}</td>
+            <td>{{ player.get_position_display }}</td>
+            <td>{{ player.name }}</td>
+            <td>{{ player.country }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td>Soupiska není k dispozici.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

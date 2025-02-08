@@ -1,0 +1,25 @@
+{% load static %} <!-- Musí být,jinak mi to nechce načíst css -->
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Chance Liga{% endblock %}</title> <!-- hlavička záložky(každy html má jinou) -->
+    <link rel="stylesheet" href="{% static 'css/styly.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'domu' %}">Domů</a></li>
+            <li><a href="{% url 'seznam_tymu' %}">Seznam týmů</a></li>
+            <li><a href="{% url 'tabulka' %}">Tabulka</a></li>
+        </ul>
+    </nav>
+
+    <!-- Obsah stránky (dynamický obsah pro každou stránku) -->
+    <div>
+        {% block content %} <!-- V tomto bloku se nedědí z hlavní.html uzavírá se endblokem-->
+        {% endblock %}
+    </div>
+</body>
+</html>

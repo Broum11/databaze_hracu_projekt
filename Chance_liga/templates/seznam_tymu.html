@@ -1,0 +1,25 @@
+{% extends 'hlavni.html' %}
+
+{% block title %}Seznam týmů - Chance Liga{% endblock %}
+
+{% block content %} <!-- V tomto bloku se nedědí z hlavní.html uzavírá se endblokem-->
+<h1>Seznam týmů</h1>
+<table>
+    <thead>  <!-- hlavička tabulky -->
+        <tr>
+            <th>Klub</th>
+            <th>Město</th>
+            <th>Stadion</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for team in teams %} <!-- Pod tabulkou je cyklus  (for team in teams ) , což znamená, že pro každý tým, který je v seznamu teams, se vykreslí nový řádek tabulky s informacemi o daném týmu. -->
+        <tr>
+            <td><a href="{% url 'soupiska_hracu' team.id %}">{{ team.name }}</a></td>
+            <td>{{ team.city }}</td>
+            <td>{{ team.stadium }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

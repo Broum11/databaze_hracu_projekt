@@ -25,9 +25,7 @@ SECRET_KEY = 'django-insecure-r_!m-&p1vi&^^mjprbyjv##h=*q**yf79ay+95t$=3tf#u=di9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['braun.pythonanywhere.com']
-STATIC_URL = 's/'
-STATIC_ROOT ='static/'
+ALLOWED_HOSTS = ['127.0.0.1' ]
 
 # Application definition
 
@@ -38,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Chance_liga',
+    
 ]
 
 MIDDLEWARE = [
@@ -112,11 +112,14 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_ROOT =[
+    BASE_DIR / 'Chance_liga/static/css',
+]
+STATIC_URL = 'Chance_liga/static/'
+STATIC_ROOT = 'Chance_liga/static/css'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

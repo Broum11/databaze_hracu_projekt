@@ -1,0 +1,194 @@
+/* Obecný reset stylů  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Základní styl pro celé body stránky */
+body {
+    background-color: #f4f4f9;
+    color: #333333;
+    padding-top: 20px;  
+}
+
+nav ul {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #373535;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover { /*nastavuje změnu pozadí a barvy textu při najetí myší.*/
+    background-color: #555;
+    color: whitesmoke;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 900px; /*zajišťuje, že text nepřesáhne šířku 900px, zlepšuje čitelnost.*/
+}
+
+/* Styly pro záložky */
+ul {
+    list-style: none;
+    margin: 20px auto;
+    padding: 0;
+    max-width: 900px;
+    text-align: center;
+}
+
+ul li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 15px 5px 5px rgba(1, 10, 0, 0.4);/* stínování záložek */
+    font-size: 1.1em;
+    transition: background-color 0.3s ease; /*pomalý přechod barvy na pozadí*/
+}
+
+ul li:hover {
+    background-color: #f1f1f1;/* po přejetí myší,bílé pozadí */
+}
+/* styly pro domu.html */
+.home {
+    background-image: url("/Chance_liga/static/images/people.jpg");
+    background-size: cover; /* přizpůsbí velikost obrázku */
+    background-attachment: fixed; /* zůstává pevně na pozadí při scrollování */
+    background-position: center; /* zajistí lepší vzhled na mobilních zařízeních */
+    
+}
+.headline, .next {
+    color: white;
+    text-shadow: 2px 2px 3px black; /* černý okraj(pro lepší čítelnost) */
+    font-size: 3em;
+  }
+  
+.next{
+    font-size: 20px; 
+  }
+
+/* pro tabulku a seznamu týmů */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* pro tabulku a seznamu týmů */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Responzivní design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul li a {
+        padding: 15px 25px;
+    }
+    h1 {
+        font-size: 1.75em;
+    }
+    p {
+        font-size: 1.1em;
+        padding: 0 15px; /* lepší čitelnost na mobilu*/
+    }
+    ul li {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 450px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav ul li a {
+        padding: 15px 30px;
+        font-size: 16px; /* menší písmo pro úsporu místa */
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+    ul li {
+        font-size: 1em;
+    }
+    
+    /* Zajistí lepší zobrazení obrázků na mobilu */
+    .home {
+        background-size: contain; /* Přizpůsobí pozadí obrazovce */
+        background-attachment: scroll; /* Změní chování pozadí při posouvání na mobilních zařízeních */
+    }
+}
