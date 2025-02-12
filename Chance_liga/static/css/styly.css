@@ -184,11 +184,5 @@ tr:hover {
     }
     ul li {
         font-size: 1em;
-    }
-    
-    /* Zajistí lepší zobrazení obrázků na mobilu */
-    .home {
-        background-size: contain; /* Přizpůsobí pozadí obrazovce */
-        background-attachment: scroll; /* Změní chování pozadí při posouvání na mobilních zařízeních */
-    }
+    }    
 }
