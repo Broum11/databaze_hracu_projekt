@@ -89,9 +89,9 @@ ul li:hover {
     background-image: url("/Chance_liga/static/images/people.jpg");
     background-size: cover; /* přizpůsbí velikost obrázku */
     background-attachment: fixed; /* zůstává pevně na pozadí při scrollování */
-    background-position: center; /* zajistí lepší vzhled na mobilních zařízeních */
-    
+    background-position: center; /* zajistí lepší vzhled na mobilních zařízeních */    
 }
+
 .headline, .next {
     color: white;
     text-shadow: 2px 2px 3px black; /* černý okraj(pro lepší čítelnost) */
@@ -184,5 +184,7 @@ tr:hover {
     }
     ul li {
         font-size: 1em;
-    }    
+    }
+
+       
 }
